@@ -1,2 +1,2 @@
-# TCC---An-lise-de-sentimentos-e-minera-o-de-dados
-TCC Feito como repositório do projeto de conclusão de curso em questão
+# TCC ANALISE DE SENTIMENTOS E MINEIRAÇÃO DE DADOS
+TCC Feito para análise de sentimentos e mineiração de dados, da universidade paulista - UNIP
