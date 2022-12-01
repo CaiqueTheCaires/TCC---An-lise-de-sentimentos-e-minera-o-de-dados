@@ -1,0 +1,329 @@
+/*  Google Fonts Import - Poppins */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ====== CORES ======*/
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --cor-primaria: #0A84FF;
+    --cor-primaria-light: #3c3c3c;
+    --toggle-color: #2c2c2c;
+    --text-color: #f7f7f7;
+
+    /* ====== TRANSIÇÕES ======*/
+    --tran-02: all 0.2s ease; 
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body {
+    margin: 0px;
+}
+
+body.light {
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --cor-primaria: #0A84FF;
+    --cor-primaria-light: #f6f5ff;
+    --toggle-color:#0A84FF;
+    --text-color: #707070;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #0A84FF;  
+}
+
+
+.box {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    max-width: 850px;
+    padding: 20px;
+}
+
+section {
+    background: #f2f4fc;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.container header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #0A84FF;
+}
+
+.container .titulo {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+label{
+    font-size: 14px;
+    font-weight: 300;
+    color: #2e2e2e;
+}
+
+.topic {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* ============= NAVBAR ============= */
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+
+/* ============= SECTION 1 ============= */
+
+.campo-entrada{
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+}
+
+.campo-entrada input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0 0;
+}
+
+.campo-entrada input:is(:focus, :valid){
+    border: 2px solid #0A84FF;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+/* ============= SECTION 1 END ============= */
+
+/* ============= SECTION 2  ============= */
+/* ============= DIV IDIOMA ============= */
+
+.idioma{
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+}
+.custom-radio input{
+    display: none;
+    
+}
+
+.radio-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-buttons .radio-btn {
+    background: #fff;
+    display: flex;
+    padding: 0 15px;
+    border-radius: 4px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    width: 300px;
+    height: 42px;
+}
+.country-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    overflow: hidden;
+}
+ .country-img img{
+    width: 100%;
+    height: 100%;
+    user-select: none; 
+}
+ .check-icon{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+}
+
+ .check-icon .icon{
+    display: inline-block;
+    position: absolute;
+    width: 18px;
+    height: 8px;
+    transform: rotate(-40deg);  
+}
+ .check-icon .icon::before{
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left:0;
+    bottom:0;
+    border-radius: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.231);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.2s ease-in-out;
+}
+ .check-icon .icon::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left:0;
+    bottom:0;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.231);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-radio input:checked + .radio-btn {
+    border: 2px solid #0A84FF;
+    border-radius: 5px;
+}
+.custom-radio input:checked + .radio-btn .check-icon{
+    background-color: #0A84FF;
+}
+.custom-radio input:checked + .radio-btn .check-icon .icon::before,
+.custom-radio input:checked + .radio-btn .check-icon .icon::after{
+    transform: scale(1);
+}
+
+.campo-entrada input[type=date]{
+    color: #707070;
+}
+.campo-entrada input[type=date]:valid{
+    color: #707070;
+}
+/* ============= DIV IDIOMA END ============= */
+
+/* ============= DIV DATA ============= */
+
+.data{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+.periodo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+.input-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.input-data input{
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 0;
+}
+
+/* ============= DIV DATA END ============= */
+/* ============= SECTION 2 END ============- */
+
+/* ============= SECTION 3 ============- */
+/* ============= DIV BUSCA ============= */
+
+.input-busca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    height: 42px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #0A84FF;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0px 85px 34px rgba(10, 132, 255, 0.01), 0px 48px 29px rgba(10, 132, 255, 0.05), 0px 21px 21px rgba(10, 132, 255, 0.09), 0px 5px 12px rgba(10, 132, 255, 0.1), 0px 0px 0px rgba(10, 132, 255, 0.1);
+}
+button i{
+    margin: 0 6px
+}
+/* ============= SECTION 3 END ============- */
+/* ============= DIV BUSCA END ============= */
+
